@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<style>
+body {
+background-color: black;
+color: white;
+}
+
+img {
+position: absolute;
+width: 100%;
+z-index: -1;
+}
+
+.bigcontainer {
+
+}
+
+h1 {
+line-height: 100%;
+padding: 0;
+font-size: 3vh;
+}
+
+.container {
+position: absolute;
+border: 3px solid black;
+border-radius: 10px;
+width: 90%;
+padding: 20px;
+display: none;
+box-shadow: 0px 0px 10px 1px yellow;
+margin-top: 2em;
+margin-left: 0.5em;
+}
+
+button {
+margin-top: 10px;
+margin-right: 10px;
+color: yellow;
+background-color: rgb(0,0,0,0.2);
+border: 1px solid black;
+font-size: 6vh;
+padding: 7px 14px;
+box-shadow: 0px 0px 3px 1px yellow;
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 10%;
+} 
+
+
+button:hover {
+text-shadow: 0px 0px 3px yellow;
+}
+
+.display  {
+border: none;
+background: white;
+border-radius: 10px;
+width: 95%;
+height: 7vh;
+font-size: 6vh;
+font-family: sans-serif;
+font-weight: 7vh;
+margin: auto;
+border: 2px solid white;
+color: black;
+margin: 10px 0px;
+}
+
+.tajenka {
+font-size: 5vh;
+display: block;
+line-height: 100%;
+}
+
+.parent 
+{
+text-align: center;
+justify-content: center;
+}
+
+.menu
+{
+display: block;
+padding: 10px;
+width: 400px;
+heigth: 60px;
+background-color: black;
+border: 2px solid white;
+font-size: 25px;
+}
+
+.menu:hover {
+background-color: purple;
+color: yellow;
+cursor: pointer;
+transition: background-color 0.25s, color 0.5s;
+}
+
+a:visited {
+  color: yellow;
+}
+
+
+.container::after {
+position: absolute;
+z-index: 2;
+display: none;
+max-width: 600px;
+padding: 10px;
+font-size: 1.125em;
+line-height: 1.4em;
+border-radius: 20px;
+background-color: rgba(0,0,0,0.8);
+color: white;
+content: attr(title);
+}
+
+.container:hover::after {
+display: inline-block;
+}
+
+
+{}
+</style>
+</head>
+<body>
+
+<audio id="zvuk1">
+<source src="zvuk/1.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk2">
+<source src="zvuk/2.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk3">
+<source src="zvuk/3.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk4">
+<source src="zvuk/4.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk5">
+<source src="zvuk/5.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk6">
+<source src="zvuk/6.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk7">
+<source src="zvuk/7.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk8">
+<source src="zvuk/8.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk9">
+<source src="zvuk/9.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk10">
+<source src="zvuk/10.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk11">
+<source src="zvuk/11.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk12">
+<source src="zvuk/12.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk13">
+<source src="zvuk/13.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk14">
+<source src="zvuk/14.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk15">
+<source src="zvuk/15.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk16">
+<source src="zvuk/16.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk17">
+<source src="zvuk/17.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk18">
+<source src="zvuk/18.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk19">
+<source src="zvuk/19.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk20">
+<source src="zvuk/20.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk21">
+<source src="zvuk/21.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk22">
+<source src="zvuk/22.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk23">
+<source src="zvuk/23.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk24">
+<source src="zvuk/24.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk25">
+<source src="zvuk/25.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk26">
+<source src="zvuk/26.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk27">
+<source src="zvuk/27.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk28">
+<source src="zvuk/28.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk29">
+<source src="zvuk/29.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk30">
+<source src="zvuk/30.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk31">
+<source src="zvuk/31.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk32">
+<source src="zvuk/32.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk33">
+<source src="zvuk/33.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk34">
+<source src="zvuk/34.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk35">
+<source src="zvuk/35.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk36">
+<source src="zvuk/36.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk37">
+<source src="zvuk/37.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk38">
+<source src="zvuk/38.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk39">
+<source src="zvuk/39.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk40">
+<source src="zvuk/40.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk41">
+<source src="zvuk/41.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk42">
+<source src="zvuk/42.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk43">
+<source src="zvuk/43.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk44">
+<source src="zvuk/44.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk45">
+<source src="zvuk/45.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk46">
+<source src="zvuk/46.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk47">
+<source src="zvuk/47.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk48">
+<source src="zvuk/48.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk49">
+<source src="zvuk/49.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk50">
+<source src="zvuk/50.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk51">
+<source src="zvuk/51.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk52">
+<source src="zvuk/52.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk53">
+<source src="zvuk/53.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk54">
+<source src="zvuk/54.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk55">
+<source src="zvuk/55.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk56">
+<source src="zvuk/56.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk57">
+<source src="zvuk/57.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk58">
+<source src="zvuk/58.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk59">
+<source src="zvuk/59.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk60">
+<source src="zvuk/60.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk61">
+<source src="zvuk/61.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk62">
+<source src="zvuk/62.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk63">
+<source src="zvuk/63.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk64">
+<source src="zvuk/64.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk65">
+<source src="zvuk/65.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk66">
+<source src="zvuk/66.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk67">
+<source src="zvuk/67.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk68">
+<source src="zvuk/68.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk69">
+<source src="zvuk/69.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk70">
+<source src="zvuk/70.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk71">
+<source src="zvuk/71.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk72">
+<source src="zvuk/72.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk73">
+<source src="zvuk/73.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk74">
+<source src="zvuk/74.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk75">
+<source src="zvuk/75.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk76">
+<source src="zvuk/76.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk77">
+<source src="zvuk/77.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk78">
+<source src="zvuk/78.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk79">
+<source src="zvuk/79.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk80">
+<source src="zvuk/80.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk81">
+<source src="zvuk/81.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk82">
+<source src="zvuk/82.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk83">
+<source src="zvuk/83.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk84">
+<source src="zvuk/84.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk85">
+<source src="zvuk/85.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk86">
+<source src="zvuk/86.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk87">
+<source src="zvuk/87.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk88">
+<source src="zvuk/88.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk89">
+<source src="zvuk/89.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk90">
+<source src="zvuk/90.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk91">
+<source src="zvuk/91.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk92">
+<source src="zvuk/92.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk93">
+<source src="zvuk/93.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk94">
+<source src="zvuk/94.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk95">
+<source src="zvuk/95.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk96">
+<source src="zvuk/96.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk97">
+<source src="zvuk/97.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk98">
+<source src="zvuk/98.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk99">
+<source src="zvuk/99.m4a" type="audio/mpeg" />
+</audio>
+<audio id="zvuk100">
+<source src="zvuk/100.m4a" type="audio/mpeg" />
+</audio>
+
+
+<div class="bigcontainer">
+<img src="sessinghaus.jpg"/>
+<div   title="Zadej český překlad. Pokud nevíš odpověď, klikni na text »Tajenka«.
+Задайте ческий переклад .Якщо незнаеш відповідь нажміть на текст »Tajenka«." class="container">
+<h1>1. Německy "sup" </h1>
+<hr/>
+<input class="display" id="text1" placeholder="answer">
+<br/>
+<button onclick="fn1()" id = "btn1">Klikni</button>
+<button id="cudlik1" style="display:none" onclick="next(1)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Geier'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>2. Německy "kosatka" </h1>
+<hr/>
+<input class="display" id="text2" placeholder="answer">
+<br/>
+<button onclick="fn2()" id = "btn2">Klikni</button>
+<button id="cudlik2" style="display:none" onclick="next(2)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Schwertwal'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>3. Německy "kur domácí" </h1>
+<hr/>
+<input class="display" id="text3" placeholder="answer">
+<br/>
+<button onclick="fn3()" id = "btn3">Klikni</button>
+<button id="cudlik3" style="display:none" onclick="next(3)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Haushuhn'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>4. Německy "žralok obrovský" </h1>
+<hr/>
+<input class="display" id="text4" placeholder="answer">
+<br/>
+<button onclick="fn4()" id = "btn4">Klikni</button>
+<button id="cudlik4" style="display:none" onclick="next(4)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Walhai'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>5. Německy "žralok veliký" </h1>
+<hr/>
+<input class="display" id="text5" placeholder="answer">
+<br/>
+<button onclick="fn5()" id = "btn5">Klikni</button>
+<button id="cudlik5" style="display:none" onclick="next(5)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Riesenhai'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>6. Německy "kondor"</h1>
+<hr/>
+<input class="display" id="text6" placeholder="answer">
+<br/>
+<button onclick="fn6()" id = "btn6">Klikni</button>
+<button id="cudlik6" style="display:none" onclick="next(6)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Neuweltgeier'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>7. Německy "kondor andský" </h1>
+<hr/>
+<input class="display" id="text7" placeholder="answer">
+<br/>
+<button onclick="fn7()" id = "btn7">Klikni</button>
+<button id="cudlik7" style="display:none" onclick="next(7)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Andenkondor'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>8. Německy "zobák" </h1>
+<hr/>
+<input class="display" id="text8" placeholder="answer">
+<br/>
+<button onclick="fn8()" id = "btn8">Klikni</button>
+<button id="cudlik8" style="display:none" onclick="next(8)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Schnabel'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>9. Německy "svišť" </h1>
+<hr/>
+<input class="display" id="text9" placeholder="answer">
+<br/>
+<button onclick="fn9()" id = "btn9">Klikni</button>
+<button id="cudlik9" style="display:none" onclick="next(9)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Murmeltier'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="Zdroj:https://cs.wikipedia.org/wiki/Kondor_andsk%C3%BD">10. Až kolika let se může dožít kondor andský v zajetí? </h1>
+<hr/>
+<input class="display" id="text10" placeholder="answer">
+<br/>
+<button onclick="fn10()" id = "btn10">Klikni</button>
+<button id="cudlik10" style="display:none" onclick="next(10)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='100'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>11. Německy "volavka popelavá" </h1>
+<hr/>
+<input class="display" id="text11" placeholder="answer">
+<br/>
+<button onclick="fn11()" id = "btn11">Klikni</button>
+<button id="cudlik11" style="display:none" onclick="next(11)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Graureiher'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>12. Německy "volavka bílá"</h1>
+<hr/>
+<input class="display" id="text12" placeholder="answer">
+<br/>
+<button onclick="fn12()" id = "btn12">Klikni</button>
+<button id="cudlik12" style="display:none" onclick="next(12)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Silberreiher'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>13. Německy "volavka stříbřitá"</h1>
+<hr/>
+<input class="display" id="text13" placeholder="answer">
+<br/>
+<button onclick="fn13()" id = "btn13">Klikni</button>
+<button id="cudlik13" style="display:none" onclick="next(13)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Seidenreiher'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>14. Německy "dusík"</h1>
+<hr/>
+<input class="display" id="text14" placeholder="answer">
+<br/>
+<button onclick="fn14()" id = "btn14">Klikni</button>
+<button id="cudlik14" style="display:none" onclick="next(14)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Stickstoff'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>15. Německy "jaderná fúze" </h1>
+<hr/>
+<input class="display" id="text15" placeholder="answer">
+<br/>
+<button onclick="fn15()" id = "btn15">Klikni</button>
+<button id="cudlik15" style="display:none" onclick="next(15)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Kernfusion'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="https://en.wikipedia.org/wiki/List_of_countries_by_inequality-adjusted_Human_Development_Index">16. Na jakém místě se nachází ČR na žebříčku "Inequality-adjusted Human Development Index" za rok 2019?</h1>
+<hr/>
+<input class="display" id="text16" placeholder="answer">
+<br/>
+<button onclick="fn16()" id = "btn16">Klikni</button>
+<button id="cudlik16" style="display:none" onclick="next(16)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='12.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="https://en.wikipedia.org/wiki/Global_Peace_Index">17. Na jakém místě se nachází ČR na žebříčku "Global Peace Index" za rok 2021 ?</h1>
+<hr/>
+<input class="display" id="text17" placeholder="answer">
+<br/>
+<button onclick="fn17()" id = "btn17">Klikni</button>
+<button id="cudlik17" style="display:none" onclick="next(17)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='9.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>18. Německy "ekonomie" </h1>
+<hr/>
+<input class="display" id="text18" placeholder="answer">
+<br/>
+<button onclick="fn18()" id = "btn18">Klikni</button>
+<button id="cudlik18" style="display:none" onclick="next(18)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Wirtschaft'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>19. Německy "vnitrozemský stát" </h1>
+<hr/>
+<input class="display" id="text19" placeholder="answer">
+<br/>
+<button onclick="fn19()" id = "btn19">Klikni</button>
+<button id="cudlik19" style="display:none" onclick="next(19)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Binnenstaat'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="https://cs.wikipedia.org/wiki/Maastrichtsk%C3%A1_smlouva">20. Kdy vstoupila v platnost Maastrichtská smlouva? </h1>
+<hr/>
+<input class="display" id="text20" placeholder="answer">
+<br/>
+<button onclick="fn20()" id = "btn20">Klikni</button>
+<button id="cudlik20" style="display:none" onclick="next(20)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='1. listopadu 1993'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="Zdroj: https://cs.wikipedia.org/wiki/Evropsk%C3%A9_hospod%C3%A1%C5%99sk%C3%A9_spole%C4%8Denstv%C3%AD">21. Kdy vzniklo Evropské hospodářské společenství? </h1>
+<hr/>
+<input class="display" id="text21" placeholder="answer">
+<br/>
+<button onclick="fn21()" id = "btn21">Klikni</button>
+<button id="cudlik21" style="display:none" onclick="next(21)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='1. ledna 1958'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>22. Německy "hlava státu" </h1>
+<hr/>
+<input class="display" id="text22" placeholder="answer">
+<br/>
+<button onclick="fn22()" id = "btn22">Klikni</button>
+<button id="cudlik22" style="display:none" onclick="next(22)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Staatsoberhaupt'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>23. Německy "společnost"  </h1>
+<hr/>
+<input class="display" id="text23" placeholder="answer">
+<br/>
+<button onclick="fn23()" id = "btn23">Klikni</button>
+<button id="cudlik23" style="display:none" onclick="next(23)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Gesellschaft'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="Zdroj: http://gymnazium1.milevsko.cz/dokumenty/ekf2/inf/inflace.html">24. Inflace je ...  </h1>
+<hr/>
+<input class="display" id="text24" placeholder="answer">
+<br/>
+<button onclick="fn24()" id = "btn24">Klikni</button>
+<button id="cudlik24" style="display:none" onclick="next(24)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='růst cenové hladiny'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="Zdroj: http://gymnazium1.milevsko.cz/dokumenty/ekf2/inf/inflace.html">25. Deflace je ...  </h1>
+<hr/>
+<input class="display" id="text25" placeholder="answer">
+<br/>
+<button onclick="fn25()" id = "btn25">Klikni</button>
+<button id="cudlik25" style="display:none" onclick="next(25)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='pokles cenové hladiny'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="Zdroj: http://gymnazium1.milevsko.cz/dokumenty/ekf2/inf/inflace.html">26. Dezinflace je ... </h1>
+<hr/>
+<input class="display" id="text26" placeholder="answer">
+<br/>
+<button onclick="fn26()" id = "btn26">Klikni</button>
+<button id="cudlik26" style="display:none" onclick="next(26)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='snížení tempa růstu cenové hladiny oproti předcházejícímu období'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="Zdroj: http://gymnazium1.milevsko.cz/dokumenty/ekf2/inf/inflace.html">27. Dezinflace je ... růstu cenové hladiny oproti předcházejícímu období  </h1>
+<hr/>
+<input class="display" id="text27" placeholder="answer">
+<br/>
+<button onclick="fn27()" id = "btn27">Klikni</button>
+<button id="cudlik27" style="display:none" onclick="next(27)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='snížení tempa'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="Zdroj: http://gymnazium1.milevsko.cz/dokumenty/ekf2/inf/inflace.html">28. Dezinflace je snížení ... oproti předcházejícímu období </h1>
+<hr/>
+<input class="display" id="text28" placeholder="answer">
+<br/>
+<button onclick="fn28()" id = "btn28">Klikni</button>
+<button id="cudlik28" style="display:none" onclick="next(28)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='tempa růstu cenové hladiny'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="Zdroj: http://gymnazium1.milevsko.cz/dokumenty/ekf2/inf/inflace.html">29. Dezinflace je ... cenové hladiny oproti předcházejícímu období  </h1>
+<hr/>
+<input class="display" id="text29" placeholder="answer">
+<br/>
+<button onclick="fn29()" id = "btn29">Klikni</button>
+<button id="cudlik29" style="display:none" onclick="next(29)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='snížení tempa růstu'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="Zdroj: http://gymnazium1.milevsko.cz/dokumenty/ekf2/inf/inflace.html">30. Dezinflace je snížení tempa růstu cenové hladiny oproti ... </h1>
+<hr/>
+<input class="display" id="text30" placeholder="answer">
+<br/>
+<button onclick="fn30()" id = "btn30">Klikni</button>
+<button id="cudlik30" style="display:none" onclick="next(30)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='předcházejícímu období'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="Zdroj: http://gymnazium1.milevsko.cz/dokumenty/ekf2/inf/inflace.html">31. Podle výše rozlišujeme inflaci ... </h1>
+<hr/>
+<input class="display" id="text31" placeholder="answer">
+<br/>
+<button onclick="fn31()" id = "btn31">Klikni</button>
+<button id="cudlik31" style="display:none" onclick="next(31)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='mírnou, pádivou a hyperinflaci'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="Zdroj: http://gymnazium1.milevsko.cz/dokumenty/ekf2/inf/inflace.html">32. Podle příčin rozlišujeme inflaci ... </h1>
+<hr/>
+<input class="display" id="text32" placeholder="answer">
+<br/>
+<button onclick="fn32()" id = "btn32">Klikni</button>
+<button id="cudlik32" style="display:none" onclick="next(32)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='poptávkovou, nabídkovou a setrvačnou'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="Zdroj: FTVS prezentace">33. Podíl nezaměstnaných v procentech se označuje jako ... </h1>
+<hr/>
+<input class="display" id="text33" placeholder="answer">
+<br/>
+<button onclick="fn33()" id = "btn33">Klikni</button>
+<button id="cudlik33" style="display:none" onclick="next(33)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='míra nezaměstnanosti'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="Zdroj: FTVS prezentace">34. Celkvý počet lidí bez práce, kteří jí hledají, se nazývá ... </h1>
+<hr/>
+<input class="display" id="text34" placeholder="answer">
+<br/>
+<button onclick="fn34()" id = "btn34">Klikni</button>
+<button id="cudlik34" style="display:none" onclick="next(34)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='absolutní nezaměstnanost'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>35. Typy nezaměstnanosti jsou:  </h1>
+<hr/>
+<input class="display" id="text35" placeholder="answer">
+<br/>
+<button onclick="fn35()" id = "btn35">Klikni</button>
+<button id="cudlik35" style="display:none" onclick="next(35)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='frikční, strukturální, sezónní, cyklická'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="Zdroj: FTVS prezentace">36. Frikční nezaměstnanost - ... nezaměstnanost způsobená dobou věnovanou hledání nové práce </h1><hr/>
+<input class="display" id="text36" placeholder="answer">
+<br/>
+<button onclick="fn36()" id = "btn36">Klikni</button>
+<button id="cudlik36" style="display:none" onclick="next(36)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='přechodná, krátkodobá'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1 title="Zdroj: FTVS prezentace">37. Frikční nezaměstnanost - přechodná, krátkodobá ... dobou věnovanou hledání nové práce  </h1>
+<hr/>
+<input class="display" id="text37" placeholder="answer">
+<br/>
+<button onclick="fn37()" id = "btn37">Klikni</button>
+<button id="cudlik37" style="display:none" onclick="next(37)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='nezaměstnanost způsobená'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>38. ї́жа </h1>
+<hr/>
+<input class="display" id="text38" placeholder="answer">
+<br/>
+<button onclick="fn38()" id = "btn38">Klikni</button>
+<button id="cudlik38" style="display:none" onclick="next(38)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='jídlo'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>39. мали́й </h1>
+<hr/>
+<input class="display" id="text39" placeholder="answer">
+<br/>
+<button onclick="fn39()" id = "btn39">Klikni</button>
+<button id="cudlik39" style="display:none" onclick="next(39)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='malý'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>40. сього́дні </h1>
+<hr/>
+<input class="display" id="text40" placeholder="answer">
+<br/>
+<button onclick="fn40()" id = "btn40">Klikni</button>
+<button id="cudlik40" style="display:none" onclick="next(40)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='dnes'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>41. скі́льки </h1>
+<hr/>
+<input class="display" id="text41" placeholder="answer">
+<br/>
+<button onclick="fn41()" id = "btn41">Klikni</button>
+<button id="cudlik41" style="display:none" onclick="next(41)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='kolik'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>42. шви́дко </h1>
+<hr/>
+<input class="display" id="text42" placeholder="answer">
+<br/>
+<button onclick="fn42()" id = "btn42">Klikni</button>
+<button id="cudlik42" style="display:none" onclick="next(42)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='rychle'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>43. ді́вчина </h1>
+<hr/>
+<input class="display" id="text43" placeholder="answer">
+<br/>
+<button onclick="fn43()" id = "btn43">Klikni</button>
+<button id="cudlik43" style="display:none" onclick="next(43)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='dívka'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>44. пові́льно </h1>
+<hr/>
+<input class="display" id="text44" placeholder="answer">
+<br/>
+<button onclick="fn44()" id = "btn44">Klikni</button>
+<button id="cudlik44" style="display:none" onclick="next(44)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='pomalu'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>45. купи́ти </h1>
+<hr/>
+<input class="display" id="text45" placeholder="answer">
+<br/>
+<button onclick="fn45()" id = "btn45">Klikni</button>
+<button id="cudlik45" style="display:none" onclick="next(45)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='koupit'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>46. ва́жко </h1>
+<hr/>
+<input class="display" id="text46" placeholder="answer">
+<br/>
+<button onclick="fn46()" id = "btn46">Klikni</button>
+<button id="cudlik46" style="display:none" onclick="next(46)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='obtížně'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>47. раху́нок </h1>
+<hr/>
+<input class="display" id="text47" placeholder="answer">
+<br/>
+<button onclick="fn47()" id = "btn47">Klikni</button>
+<button id="cudlik47" style="display:none" onclick="next(47)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='účet'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>48. Мо́жете мені́ допомогти́? </h1>
+<hr/>
+<input class="display" id="text48" placeholder="answer">
+<br/>
+<button onclick="fn48()" id = "btn48">Klikni</button>
+<button id="cudlik48" style="display:none" onclick="next(48)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Mohl byste mi pomoci?'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>49. чай </h1>
+<hr/>
+<input class="display" id="text49" placeholder="answer">
+<br/>
+<button onclick="fn49()" id = "btn49">Klikni</button>
+<button id="cudlik49" style="display:none" onclick="next(49)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='čaj'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>50. Дя́кую! </h1>
+<hr/>
+<input class="display" id="text50" placeholder="answer">
+<br/>
+<button onclick="fn50()" id = "btn50">Klikni</button>
+<button id="cudlik50" style="display:none" onclick="next(50)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Děkuji!'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>51. хло́пчик </h1>
+<hr/>
+<input class="display" id="text51" placeholder="answer">
+<br/>
+<button onclick="fn51()" id = "btn51">Klikni</button>
+<button id="cudlik51" style="display:none" onclick="next(51)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='chlapec'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>52. жі́нка </h1>
+<hr/>
+<input class="display" id="text52" placeholder="answer">
+<br/>
+<button onclick="fn52()" id = "btn52">Klikni</button>
+<button id="cudlik52" style="display:none" onclick="next(52)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='žena'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>53. чолові́к </h1>
+<hr/>
+<input class="display" id="text53" placeholder="answer">
+<br/>
+<button onclick="fn53()" id = "btn53">Klikni</button>
+<button id="cudlik53" style="display:none" onclick="next(53)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='muž'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>54. Раху́нок, будь ла́ска!</h1>
+<hr/>
+<input class="display" id="text54" placeholder="answer">
+<br/>
+<button onclick="fn54()" id = "btn54">Klikni</button>
+<button id="cudlik54" style="display:none" onclick="next(54)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Účet, prosím!'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>55. пра́вильно</h1>
+<hr/>
+<input class="display" id="text55" placeholder="answer">
+<br/>
+<button onclick="fn55()" id = "btn55">Klikni</button>
+<button id="cudlik55" style="display:none" onclick="next(55)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='správně'">Tajenka</p>
+</div>
+
+
+<div class="container">
+<h1>56. пи́во </h1>
+<hr/>
+<input class="display" id="text56" placeholder="answer">
+<br/>
+<button onclick="fn56()" id = "btn56">Klikni</button>
+<button id="cudlik56" style="display:none" onclick="next(56)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='pivo'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>57. Скі́льки це ко́штує? </h1>
+<hr/>
+<input class="display" id="text57" placeholder="answer">
+<br/>
+<button onclick="fn57()" id = "btn57">Klikni</button>
+<button id="cudlik57" style="display:none" onclick="next(57)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Kolik to stojí?'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>58. Скі́льки це ко́штує на добу́? </h1>
+<hr/>
+<input class="display" id="text58" placeholder="answer">
+<br/>
+<button onclick="fn58()" id = "btn58">Klikni</button>
+<button id="cudlik58" style="display:none" onclick="next(58)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Kolik to stojí na den?'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>59. ка́ва </h1>
+<hr/>
+<input class="display" id="text59" placeholder="answer">
+<br/>
+<button onclick="fn59()" id = "btn59">Klikni</button>
+<button id="cudlik59" style="display:none" onclick="next(59)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='káva'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>60. готе́ль </h1>
+<hr/>
+<input class="display" id="text60" placeholder="answer">
+<br/>
+<button onclick="fn60()" id = "btn60">Klikni</button>
+<button id="cudlik60" style="display:none" onclick="next(60)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='hotel'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>61. рестора́н </h1>
+<hr/>
+<input class="display" id="text61" placeholder="answer">
+<br/>
+<button onclick="fn61()" id = "btn61">Klikni</button>
+<button id="cudlik61" style="display:none" onclick="next(61)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='restaurace'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>62. хо́лодно </h1>
+<hr/>
+<input class="display" id="text62" placeholder="answer">
+<br/>
+<button onclick="fn62()" id = "btn62">Klikni</button>
+<button id="cudlik62" style="display:none" onclick="next(62)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='chladno'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>63. Тут хо́лодно. </h1>
+<hr/>
+<input class="display" id="text63" placeholder="answer">
+<br/>
+<button onclick="fn63()" id = "btn63">Klikni</button>
+<button id="cudlik63" style="display:none" onclick="next(63)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Je tady chladno.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>64. туале́т</h1>
+<hr/>
+<input class="display" id="text64" placeholder="answer">
+<br/>
+<button onclick="fn64()" id = "btn64">Klikni</button>
+<button id="cudlik64" style="display:none" onclick="next(64)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='toaleta'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>65. шкарпе́тка</h1>
+<hr/>
+<input class="display" id="text65" placeholder="answer">
+<br/>
+<button onclick="fn65()" id = "btn65">Klikni</button>
+<button id="cudlik65" style="display:none" onclick="next(65)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='ponožka'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>66. краси́вий</h1>
+<hr/>
+<input class="display" id="text66" placeholder="answer">
+<br/>
+<button onclick="fn66()" id = "btn66">Klikni</button>
+<button id="cudlik66" style="display:none" onclick="next(66)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='krásný'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>67. Мені́ те́пло. </h1>
+<hr/>
+<input class="display" id="text67" placeholder="answer">
+<br/>
+<button onclick="fn67()" id = "btn67">Klikni</button>
+<button id="cudlik67" style="display:none" onclick="next(67)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Je mi teplo.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>68. Мені́ жа́рко. </h1>
+<hr/>
+<input class="display" id="text68" placeholder="answer">
+<br/>
+<button onclick="fn68()" id = "btn68">Klikni</button>
+<button id="cudlik68" style="display:none" onclick="next(68)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Je mi horko.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>69. свобо́дна во́ля </h1>
+<hr/>
+<input class="display" id="text69" placeholder="answer">
+<br/>
+<button onclick="fn69()" id = "btn69">Klikni</button>
+<button id="cudlik69" style="display:none" onclick="next(69)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='svobodná vůle'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>70. свобо́да </h1>
+<hr/>
+<input class="display" id="text70" placeholder="answer">
+<br/>
+<button onclick="fn70()" id = "btn70">Klikni</button>
+<button id="cudlik70" style="display:none" onclick="next(70)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='svoboda'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>71. бар </h1>
+<hr/>
+<input class="display" id="text71" placeholder="answer">
+<br/>
+<button onclick="fn71()" id = "btn71">Klikni</button>
+<button id="cudlik71" style="display:none" onclick="next(71)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='bar'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>72. суперма́ркет </h1>
+<hr/>
+<input class="display" id="text72" placeholder="answer">
+<br/>
+<button onclick="fn72()" id = "btn72">Klikni</button>
+<button id="cudlik72" style="display:none" onclick="next(72)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='supermarket'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>73. До́брий день. </h1>
+<hr/>
+<input class="display" id="text73" placeholder="answer">
+<br/>
+<button onclick="fn73()" id = "btn73">Klikni</button>
+<button id="cudlik73" style="display:none" onclick="next(73)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Dobrý den.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>74. банкома́т</h1>
+<hr/>
+<input class="display" id="text74" placeholder="answer">
+<br/>
+<button onclick="fn74()" id = "btn74">Klikni</button>
+<button id="cudlik74" style="display:none" onclick="next(74)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='bankomat'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>75. Вибача́юся. </h1>
+<hr/>
+<input class="display" id="text75" placeholder="answer">
+<br/>
+<button onclick="fn75()" id = "btn75">Klikni</button>
+<button id="cudlik75" style="display:none" onclick="next(75)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Pardon.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>76. Йому́ 25 ро́ків. </h1>
+<hr/>
+<input class="display" id="text76" placeholder="answer">
+<br/>
+<button onclick="fn76()" id = "btn76">Klikni</button>
+<button id="cudlik76" style="display:none" onclick="next(76)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Je mu 25 let.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>77. Я йому́ не ві́рю.</h1>
+<hr/>
+<input class="display" id="text77" placeholder="answer">
+<br/>
+<button onclick="fn77()" id = "btn77">Klikni</button>
+<button id="cudlik77" style="display:none" onclick="next(77)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Nevěřím mu.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>78. Він полама́в собі́ ру́ку.</h1>
+<hr/>
+<input class="display" id="text78" placeholder="answer">
+<br/>
+<button onclick="fn78()" id = "btn78">Klikni</button>
+<button id="cudlik78" style="display:none" onclick="next(78)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Zlomil si ruku.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>79. я</h1>
+<hr/>
+<input class="display" id="text79" placeholder="answer">
+<br/>
+<button onclick="fn79()" id = "btn79">Klikni</button>
+<button id="cudlik79" style="display:none" onclick="next(79)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='já'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>80. вона́</h1>
+<hr/>
+<input class="display" id="text80" placeholder="answer">
+<br/>
+<button onclick="fn80()" id = "btn80">Klikni</button>
+<button id="cudlik80" style="display:none" onclick="next(80)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='ona'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>81. вони́ </h1>
+<hr/>
+<input class="display" id="text81" placeholder="answer">
+<br/>
+<button onclick="fn81()" id = "btn81">Klikni</button>
+<button id="cudlik81" style="display:none" onclick="next(81)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='oni, ony, ona'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>82. жо́ден з них </h1>
+<hr/>
+<input class="display" id="text82" placeholder="answer">
+<br/>
+<button onclick="fn82()" id = "btn82">Klikni</button>
+<button id="cudlik82" style="display:none" onclick="next(82)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='žádný z nich'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>83. Скажи́ їм, неха́й зачека́ють. </h1>
+<hr/>
+<input class="display" id="text83" placeholder="answer">
+<br/>
+<button onclick="fn83()" id = "btn83">Klikni</button>
+<button id="cudlik83" style="display:none" onclick="next(83)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Řekni jim, ať počkají.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>84. ми</h1>
+<hr/>
+<input class="display" id="text84" placeholder="answer">
+<br/>
+<button onclick="fn84()" id = "btn84">Klikni</button>
+<button id="cudlik84" style="display:none" onclick="next(84)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='my'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>85. з на́ми</h1>
+<hr/>
+<input class="display" id="text85" placeholder="answer">
+<br/>
+<button onclick="fn85()" id = "btn85">Klikni</button>
+<button id="cudlik85" style="display:none" onclick="next(85)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='s námi'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>86. Захо́дьте до нас.</h1>
+<hr/>
+<input class="display" id="text86" placeholder="answer">
+<br/>
+<button onclick="fn86()" id = "btn86">Klikni</button>
+<button id="cudlik86" style="display:none" onclick="next(86)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Přijďte k nám.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>87. ти </h1>
+<hr/>
+<input class="display" id="text87" placeholder="answer">
+<br/>
+<button onclick="fn87()" id = "btn87">Klikni</button>
+<button id="cudlik87" style="display:none" onclick="next(87)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='ty'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>88. з тобо́ю </h1>
+<hr/>
+<input class="display" id="text88" placeholder="answer">
+<br/>
+<button onclick="fn88()" id = "btn88">Klikni</button>
+<button id="cudlik88" style="display:none" onclick="next(88)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='s tebou'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>89. ви </h1>
+<hr/>
+<input class="display" id="text89" placeholder="answer">
+<br/>
+<button onclick="fn89()" id = "btn89">Klikni</button>
+<button id="cudlik89" style="display:none" onclick="next(89)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='vy'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>90. Я вас чека́ю</h1>
+<hr/>
+<input class="display" id="text90" placeholder="answer">
+<br/>
+<button onclick="fn90()" id = "btn90">Klikni</button>
+<button id="cudlik90" style="display:none" onclick="next(90)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Čekám na vás.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>91. воно́ </h1>
+<hr/>
+<input class="display" id="text91" placeholder="answer">
+<br/>
+<button onclick="fn91()" id = "btn91">Klikni</button>
+<button id="cudlik91" style="display:none" onclick="next(91)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='ono'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>92. До поба́чення. </h1>
+<hr/>
+<input class="display" id="text92" placeholder="answer">
+<br/>
+<button onclick="fn92()" id = "btn92">Klikni</button>
+<button id="cudlik92" style="display:none" onclick="next(92)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Na shledanou.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>93. зі мно́ю </h1>
+<hr/>
+<input class="display" id="text93" placeholder="answer">
+<br/>
+<button onclick="fn93()" id = "btn93">Klikni</button>
+<button id="cudlik93" style="display:none" onclick="next(93)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='se mnou'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>94. У ме́не боли́ть голова́.</h1>
+<hr/>
+<input class="display" id="text94" placeholder="answer">
+<br/>
+<button onclick="fn94()" id = "btn94">Klikni</button>
+<button id="cudlik94" style="display:none" onclick="next(94)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Bolí mě hlava.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>95. Ме́не ну́дить. </h1>
+<hr/>
+<input class="display" id="text95" placeholder="answer">
+<br/>
+<button onclick="fn95()" id = "btn95">Klikni</button>
+<button id="cudlik95" style="display:none" onclick="next(95)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='Je mi blbě.'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>96. хліб </h1>
+<hr/>
+<input class="display" id="text96" placeholder="answer">
+<br/>
+<button onclick="fn96()" id = "btn96">Klikni</button>
+<button id="cudlik96" style="display:none" onclick="next(96)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='chléb'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>97. ку́рка </h1>
+<hr/>
+<input class="display" id="text97" placeholder="answer">
+<br/>
+<button onclick="fn97()" id = "btn97">Klikni</button>
+<button id="cudlik97" style="display:none" onclick="next(97)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='kuře'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>98. свини́на</h1>
+<hr/>
+<input class="display" id="text98" placeholder="answer">
+<br/>
+<button onclick="fn98()" id = "btn98">Klikni</button>
+<button id="cudlik98" style="display:none" onclick="next(98)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='vepřové'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>99. я́блуко</h1>
+<hr/>
+<input class="display" id="text99" placeholder="answer">
+<br/>
+<button onclick="fn99()" id = "btn99">Klikni</button>
+<button id="cudlik99" style="display:none" onclick="next(99)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='jablko'">Tajenka</p>
+</div>
+
+<div class="container">
+<h1>100. бана́н</h1>
+<hr/>
+<input class="display" id="text100" placeholder="answer">
+<br/>
+<button onclick="fn100()" id = "btn100">Klikni</button>
+<button id="cudlik100" style="display:none" onclick="next(100)">Další</button>
+<p class="tajenka" onclick="this.innerHTML='banán'">Tajenka</p>
+</div>
+
+<div class="container">
+<p>JSEŠ NA KONCI!!! BLAHOPŘEJI!!!</p>
+</div>
+
+</div>
+<script>
+document.getElementsByClassName('container')[0].style.display = "block";
+
+function fn1()
+{
+if (document.getElementById("text1").value == "Geier") {
+document.getElementById('cudlik1').style.display = "inline";
+document.getElementById('zvuk1').play(); return false;
+}
+}
+
+function fn2()
+{
+if (document.getElementById("text2").value == "Schwertwal") {
+document.getElementById('cudlik2').style.display = "inline";
+document.getElementById('zvuk2').play(); return false;
+}
+}
+
+function fn3()
+{
+if (document.getElementById("text3").value == "Haushuhn") {
+document.getElementById('cudlik3').style.display = "inline";
+document.getElementById('zvuk3').play(); return false;
+}
+}
+
+function fn4()
+{
+if (document.getElementById("text4").value == "Walhai") {
+document.getElementById('cudlik4').style.display = "inline";
+document.getElementById('zvuk4').play(); return false;
+}
+}
+
+function fn5()
+{
+if (document.getElementById("text5").value == "Riesenhai") {
+document.getElementById('cudlik5').style.display = "inline";
+document.getElementById('zvuk5').play(); return false;
+}
+}
+
+function fn6()
+{
+if (document.getElementById("text6").value == "Neuweltgeier") {
+document.getElementById('cudlik6').style.display = "inline";
+document.getElementById('zvuk6').play(); return false;
+}
+}
+
+
+function fn7()
+{
+if (document.getElementById("text7").value == "Andenkondor") {
+document.getElementById('cudlik7').style.display = "inline";
+document.getElementById('zvuk7').play(); return false;
+}
+}
+
+
+function fn8()
+{
+if (document.getElementById("text8").value == "Schnabel") {
+document.getElementById('cudlik8').style.display = "inline";
+document.getElementById('zvuk8').play(); return false;
+}
+}
+
+function fn9()
+{
+if (document.getElementById("text9").value == "Murmeltier") {
+document.getElementById('cudlik9').style.display = "inline";
+document.getElementById('zvuk9').play(); return false;
+}
+}
+
+function fn10()
+{
+if (document.getElementById("text10").value == "100") {
+document.getElementById('cudlik10').style.display = "inline";
+document.getElementById('zvuk10').play(); return false;
+}
+}
+
+
+function fn11()
+{
+if (document.getElementById("text11").value == "Graureiher") {
+document.getElementById('cudlik11').style.display = "inline";
+document.getElementById('zvuk11').play(); return false;
+}
+}
+
+function fn12()
+{
+if (document.getElementById("text12").value == "Silberreiher") {
+document.getElementById('cudlik12').style.display = "inline";
+document.getElementById('zvuk12').play(); return false;
+}
+}
+
+function fn13()
+{
+if (document.getElementById("text13").value == "Seidenreiher") {
+document.getElementById('cudlik13').style.display = "inline";
+document.getElementById('zvuk13').play(); return false;
+}
+}
+
+function fn14()
+{
+if (document.getElementById("text14").value == "Stickstoff") {
+document.getElementById('cudlik14').style.display = "inline";
+document.getElementById('zvuk14').play(); return false;
+}
+}
+
+function fn15()
+{
+if (document.getElementById("text15").value == "Kernfusion") {
+document.getElementById('cudlik15').style.display = "inline";
+document.getElementById('zvuk15').play(); return false;
+}
+}
+
+
+function fn16()
+{
+if (document.getElementById("text16").value == "12.") {
+document.getElementById('cudlik16').style.display = "inline";
+document.getElementById('zvuk16').play(); return false;
+}
+}
+
+
+function fn17()
+{
+if (document.getElementById("text17").value == "9.") {
+document.getElementById('cudlik17').style.display = "inline";
+document.getElementById('zvuk17').play(); return false;
+}
+}
+
+
+function fn18()
+{
+if (document.getElementById("text18").value == "Wirtschaft") {
+document.getElementById('cudlik18').style.display = "inline";
+document.getElementById('zvuk18').play(); return false;
+}
+}
+
+function fn19()
+{
+if (document.getElementById("text19").value == "Binnenstaat") {
+document.getElementById('cudlik19').style.display = "inline";
+document.getElementById('zvuk19').play(); return false;
+}
+}
+
+function fn20()
+{
+if (document.getElementById("text20").value == "1. listopadu 1993") {
+document.getElementById('cudlik20').style.display = "inline";
+document.getElementById('zvuk20').play(); return false;
+}
+}
+
+function fn21()
+{
+if (document.getElementById("text21").value == "1. ledna 1958") {
+document.getElementById('cudlik21').style.display = "inline"
+document.getElementById('zvuk21').play(); return false;;
+}
+}
+
+function fn22()
+{
+if (document.getElementById("text22").value == "Staatsoberhaupt") {
+document.getElementById('cudlik22').style.display = "inline";
+document.getElementById('zvuk22').play(); return false;
+}
+}
+
+function fn23()
+{
+if (document.getElementById("text23").value == "Gesellschaft") {
+document.getElementById('cudlik23').style.display = "inline";
+document.getElementById('zvuk23').play(); return false;
+}
+}
+
+function fn24()
+{
+if (document.getElementById("text24").value == "růst cenové hladiny") {
+document.getElementById('cudlik24').style.display = "inline";
+document.getElementById('zvuk24').play(); return false;
+}
+}
+
+function fn25()
+{
+if (document.getElementById("text25").value == "pokles cenové hladiny") {
+document.getElementById('cudlik25').style.display = "inline";
+document.getElementById('zvuk25').play(); return false;
+}
+}
+
+
+function fn26()
+{
+if (document.getElementById("text26").value == "snížení tempa růstu cenové hladiny oproti předcházejícímu období") {
+document.getElementById('cudlik26').style.display = "inline";
+document.getElementById('zvuk26').play(); return false;
+}
+}
+
+
+function fn27()
+{
+if (document.getElementById("text27").value == "snížení tempa") {
+document.getElementById('cudlik27').style.display = "inline";
+document.getElementById('zvuk27').play(); return false;
+}
+}
+
+
+function fn28()
+{
+if (document.getElementById("text28").value == "tempa růstu cenové hladiny") {
+document.getElementById('cudlik28').style.display = "inline";
+document.getElementById('zvuk28').play(); return false;
+}
+}
+
+function fn29()
+{
+if (document.getElementById("text29").value == "snížení tempa růstu") {
+document.getElementById('cudlik29').style.display = "inline";
+document.getElementById('zvuk29').play(); return false;
+}
+}
+
+function fn30()
+{
+if (document.getElementById("text30").value == "předcházejícímu období") {
+document.getElementById('cudlik30').style.display = "inline";
+document.getElementById('zvuk30').play(); return false;
+}
+}
+
+function fn31()
+{
+if (document.getElementById("text31").value == "mírnou, pádivou a hyperinflaci") {
+document.getElementById('cudlik31').style.display = "inline";
+document.getElementById('zvuk31').play(); return false;
+}
+}
+
+function fn32()
+{
+if (document.getElementById("text32").value == "poptávkovou, nabídkovou a setrvačnou") {
+document.getElementById('cudlik32').style.display = "inline";
+document.getElementById('zvuk32').play(); return false;
+}
+}
+
+function fn33()
+{
+if (document.getElementById("text33").value == "míra nezaměstnanosti") {
+document.getElementById('cudlik33').style.display = "inline";
+document.getElementById('zvuk33').play(); return false;
+}
+}
+
+function fn34()
+{
+if (document.getElementById("text34").value == "absolutní nezaměstnanost") {
+document.getElementById('cudlik34').style.display = "inline";
+document.getElementById('zvuk34').play(); return false;
+}
+}
+
+function fn35()
+{
+if (document.getElementById("text35").value == "frikční, strukturální, sezónní, cyklická") {
+document.getElementById('cudlik35').style.display = "inline";
+document.getElementById('zvuk35').play(); return false;
+}
+}
+
+
+function fn36()
+{
+if (document.getElementById("text36").value == "přechodná, krátkodobá") {
+document.getElementById('cudlik36').style.display = "inline";
+document.getElementById('zvuk36').play(); return false;
+}
+}
+
+
+function fn37()
+{
+if (document.getElementById("text37").value == "nezaměstnanost způsobená") {
+document.getElementById('cudlik37').style.display = "inline";
+document.getElementById('zvuk37').play(); return false;
+}
+}
+
+
+function fn38()
+{
+if (document.getElementById("text38").value == "jídlo") {
+document.getElementById('cudlik38').style.display = "inline";
+document.getElementById('zvuk38').play(); return false;
+}
+}
+
+function fn39()
+{
+if (document.getElementById("text39").value == "malý") {
+document.getElementById('cudlik39').style.display = "inline";
+document.getElementById('zvuk39').play(); return false;
+}
+}
+
+function fn40()
+{
+if (document.getElementById("text40").value == "dnes") {
+document.getElementById('cudlik40').style.display = "inline";
+document.getElementById('zvuk40').play(); return false;
+}
+}
+
+
+function fn41()
+{
+if (document.getElementById("text41").value == "kolik") {
+document.getElementById('cudlik41').style.display = "inline";
+document.getElementById('zvuk41').play(); return false;
+}
+}
+
+function fn42()
+{
+if (document.getElementById("text42").value == "rychle") {
+document.getElementById('cudlik42').style.display = "inline";
+document.getElementById('zvuk42').play(); return false;
+}
+}
+
+function fn43()
+{
+if (document.getElementById("text43").value == "dívka") {
+document.getElementById('cudlik43').style.display = "inline";
+document.getElementById('zvuk43').play(); return false;
+}
+}
+
+function fn44()
+{
+if (document.getElementById("text44").value == "pomalu") {
+document.getElementById('cudlik44').style.display = "inline";
+document.getElementById('zvuk44').play(); return false;
+}
+}
+
+function fn45()
+{
+if (document.getElementById("text45").value == "koupit") {
+document.getElementById('cudlik45').style.display = "inline";
+document.getElementById('zvuk45').play(); return false;
+}
+}
+
+
+function fn46()
+{
+if (document.getElementById("text46").value == "obtížně") {
+document.getElementById('cudlik46').style.display = "inline";
+document.getElementById('zvuk46').play(); return false;
+}
+}
+
+
+function fn47()
+{
+if (document.getElementById("text47").value == "účet") {
+document.getElementById('cudlik47').style.display = "inline";
+document.getElementById('zvuk47').play(); return false;
+}
+}
+
+
+function fn48()
+{
+if (document.getElementById("text48").value == "Mohl byste mi pomoci?") {
+document.getElementById('cudlik48').style.display = "inline";
+document.getElementById('zvuk48').play(); return false;
+}
+}
+
+function fn49()
+{
+if (document.getElementById("text49").value == "čaj") {
+document.getElementById('cudlik49').style.display = "inline";
+document.getElementById('zvuk49').play(); return false;
+}
+}
+
+function fn50()
+{
+if (document.getElementById("text50").value == "Děkuji!") {
+document.getElementById('cudlik50').style.display = "inline";
+document.getElementById('zvuk50').play(); return false;
+}
+}
+
+function fn51()
+{
+if (document.getElementById("text51").value == "chlapec") {
+document.getElementById('cudlik51').style.display = "inline";
+document.getElementById('zvuk51').play(); return false;
+}
+}
+
+function fn52()
+{
+if (document.getElementById("text52").value == "žena") {
+document.getElementById('cudlik52').style.display = "inline";
+document.getElementById('zvuk52').play(); return false;
+}
+}
+
+function fn53()
+{
+if (document.getElementById("text53").value == "muž") {
+document.getElementById('cudlik53').style.display = "inline";
+document.getElementById('zvuk53').play(); return false;
+}
+}
+
+function fn54()
+{
+if (document.getElementById("text54").value == "Účet, prosím!") {
+document.getElementById('cudlik54').style.display = "inline";
+document.getElementById('zvuk54').play(); return false;
+}
+}
+
+
+function fn55()
+{
+if (document.getElementById("text55").value == "správně") {
+document.getElementById('cudlik55').style.display = "inline";
+document.getElementById('zvuk55').play(); return false;
+}
+}
+
+function fn56()
+{
+if (document.getElementById("text56").value == "pivo") {
+document.getElementById('cudlik56').style.display = "inline";
+document.getElementById('zvuk56').play(); return false;
+}
+}
+
+function fn57()
+{
+if (document.getElementById("text57").value == "Kolik to stojí?") {
+document.getElementById('cudlik57').style.display = "inline";
+document.getElementById('zvuk57').play(); return false;
+}
+}
+
+
+function fn58()
+{
+if (document.getElementById("text58").value == "Kolik to stojí na den?") {
+document.getElementById('cudlik58').style.display = "inline";
+document.getElementById('zvuk58').play(); return false;
+}
+}
+
+function fn59()
+{
+if (document.getElementById("text59").value == "káva") {
+document.getElementById('cudlik59').style.display = "inline";
+document.getElementById('zvuk59').play(); return false;
+}
+}
+
+function fn60()
+{
+if (document.getElementById("text60").value == "hotel") {
+document.getElementById('cudlik60').style.display = "inline";
+document.getElementById('zvuk60').play(); return false;
+}
+}
+
+function fn61()
+{
+if (document.getElementById("text61").value == "restaurace") {
+document.getElementById('cudlik61').style.display = "inline";
+document.getElementById('zvuk61').play(); return false;
+}
+}
+
+function fn62()
+{
+if (document.getElementById("text62").value == "chladno") {
+document.getElementById('cudlik62').style.display = "inline";
+document.getElementById('zvuk62').play(); return false;
+}
+}
+
+function fn63()
+{
+if (document.getElementById("text63").value == "Je tady chladno.") {
+document.getElementById('cudlik63').style.display = "inline";
+document.getElementById('zvuk63').play(); return false;
+}
+}
+
+function fn64()
+{
+if (document.getElementById("text64").value == "toaleta") {
+document.getElementById('cudlik64').style.display = "inline";
+document.getElementById('zvuk64').play(); return false;
+}
+}
+
+
+function fn65()
+{
+if (document.getElementById("text65").value == "ponožka") {
+document.getElementById('cudlik65').style.display = "inline";
+document.getElementById('zvuk65').play(); return false;
+}
+}
+
+function fn66()
+{
+if (document.getElementById("text66").value == "krásný") {
+document.getElementById('cudlik66').style.display = "inline";
+document.getElementById('zvuk66').play(); return false;
+}
+}
+
+function fn67()
+{
+if (document.getElementById("text67").value == "Je mi teplo.") {
+document.getElementById('cudlik67').style.display = "inline";
+document.getElementById('zvuk67').play(); return false;
+}
+}
+
+
+function fn68()
+{
+if (document.getElementById("text68").value == "Je mi horko.") {
+document.getElementById('cudlik68').style.display = "inline";
+document.getElementById('zvuk68').play(); return false;
+}
+}
+
+function fn69()
+{
+if (document.getElementById("text69").value == "svobodná vůle") {
+document.getElementById('cudlik69').style.display = "inline";
+document.getElementById('zvuk69').play(); return false;
+}
+}
+
+function fn70()
+{
+if (document.getElementById("text70").value == "svoboda") {
+document.getElementById('cudlik70').style.display = "inline";
+document.getElementById('zvuk70').play(); return false;
+}
+}
+
+
+function fn71()
+{
+if (document.getElementById("text71").value == "bar") {
+document.getElementById('cudlik71').style.display = "inline";
+document.getElementById('zvuk71').play(); return false;
+}
+}
+
+function fn72()
+{
+if (document.getElementById("text72").value == "supermarket") {
+document.getElementById('cudlik72').style.display = "inline";
+document.getElementById('zvuk72').play(); return false;
+}
+}
+
+function fn73()
+{
+if (document.getElementById("text73").value == "Dobrý den.") {
+document.getElementById('cudlik73').style.display = "inline";
+document.getElementById('zvuk73').play(); return false;
+}
+}
+
+function fn74()
+{
+if (document.getElementById("text74").value == "bankomat") {
+document.getElementById('cudlik74').style.display = "inline";
+document.getElementById('zvuk74').play(); return false;
+}
+}
+
+
+function fn75()
+{
+if (document.getElementById("text75").value == "Pardon.") {
+document.getElementById('cudlik75').style.display = "inline";
+document.getElementById('zvuk75').play(); return false;
+}
+}
+
+function fn76()
+{
+if (document.getElementById("text76").value == "Je mu 25 let.") {
+document.getElementById('cudlik76').style.display = "inline";
+document.getElementById('zvuk76').play(); return false;
+}
+}
+
+function fn77()
+{
+if (document.getElementById("text77").value == "Nevěřím mu.") {
+document.getElementById('cudlik77').style.display = "inline";
+document.getElementById('zvuk77').play(); return false;
+}
+}
+
+function fn78()
+{
+if (document.getElementById("text78").value == "Zlomil si ruku.") {
+document.getElementById('cudlik78').style.display = "inline";
+document.getElementById('zvuk78').play(); return false;
+}
+}
+
+function fn79()
+{
+if (document.getElementById("text79").value == "já") {
+document.getElementById('cudlik79').style.display = "inline";
+document.getElementById('zvuk79').play(); return false;
+}
+}
+
+function fn80()
+{
+if (document.getElementById("text80").value == "ona") {
+document.getElementById('cudlik80').style.display = "inline";
+document.getElementById('zvuk80').play(); return false;
+}
+}
+
+
+function fn81()
+{
+if (document.getElementById("text81").value == "oni, ony, ona") {
+document.getElementById('cudlik81').style.display = "inline";
+document.getElementById('zvuk81').play(); return false;
+}
+}
+
+function fn82()
+{
+if (document.getElementById("text82").value == "žádný z nich") {
+document.getElementById('cudlik82').style.display = "inline";
+document.getElementById('zvuk82').play(); return false;
+}
+}
+
+function fn83()
+{
+if (document.getElementById("text83").value == "Řekni jim, ať počkají.") {
+document.getElementById('cudlik83').style.display = "inline";
+document.getElementById('zvuk83').play(); return false;
+}
+}
+
+function fn84()
+{
+if (document.getElementById("text84").value == "my") {
+document.getElementById('cudlik84').style.display = "inline";
+document.getElementById('zvuk84').play(); return false;
+}
+}
+
+
+function fn85()
+{
+if (document.getElementById("text85").value == "s námi") {
+document.getElementById('cudlik85').style.display = "inline";
+document.getElementById('zvuk85').play(); return false;
+}
+}
+
+function fn86()
+{
+if (document.getElementById("text86").value == "Přijďte k nám.") {
+document.getElementById('cudlik86').style.display = "inline";
+document.getElementById('zvuk86').play(); return false;
+}
+}
+
+function fn87()
+{
+if (document.getElementById("text87").value == "ty") {
+document.getElementById('cudlik87').style.display = "inline";
+document.getElementById('zvuk87').play(); return false;
+}
+}
+
+
+function fn88()
+{
+if (document.getElementById("text88").value == "s tebou") {
+document.getElementById('cudlik88').style.display = "inline";
+document.getElementById('zvuk88').play(); return false;
+}
+}
+
+function fn89()
+{
+if (document.getElementById("text89").value == "vy") {
+document.getElementById('cudlik89').style.display = "inline";
+document.getElementById('zvuk89').play(); return false;
+}
+}
+
+function fn90()
+{
+if (document.getElementById("text90").value == "Čekám na vás.") {
+document.getElementById('cudlik90').style.display = "inline";
+document.getElementById('zvuk90').play(); return false;
+}
+}
+
+
+function fn91()
+{
+if (document.getElementById("text91").value == "ono") {
+document.getElementById('cudlik91').style.display = "inline";
+document.getElementById('zvuk91').play(); return false;
+}
+}
+
+function fn92()
+{
+if (document.getElementById("text92").value == "Na shledanou.") {
+document.getElementById('cudlik92').style.display = "inline";
+document.getElementById('zvuk92').play(); return false;
+}
+}
+
+function fn93()
+{
+if (document.getElementById("text93").value == "se mnou") {
+document.getElementById('cudlik93').style.display = "inline";
+document.getElementById('zvuk93').play(); return false;
+}
+}
+
+function fn94()
+{
+if (document.getElementById("text94").value == "Bolí mě hlava.") {
+document.getElementById('cudlik94').style.display = "inline";
+document.getElementById('zvuk94').play(); return false;
+}
+}
+
+
+function fn95()
+{
+if (document.getElementById("text95").value == "Je mi blbě.") {
+document.getElementById('cudlik95').style.display = "inline";
+document.getElementById('zvuk95').play(); return false;
+}
+}
+
+function fn96()
+{
+if (document.getElementById("text96").value == "chléb") {
+document.getElementById('cudlik96').style.display = "inline";
+document.getElementById('zvuk96').play(); return false;
+}
+}
+
+function fn97()
+{
+if (document.getElementById("text97").value == "kuře") {
+document.getElementById('cudlik97').style.display = "inline";
+document.getElementById('zvuk97').play(); return false;
+}
+}
+
+function fn98()
+{
+if (document.getElementById("text98").value == "vepřové") {
+document.getElementById('cudlik98').style.display = "inline";
+document.getElementById('zvuk98').play(); return false;
+}
+}
+
+function fn99()
+{
+if (document.getElementById("text99").value == "jablko") {
+document.getElementById('cudlik99').style.display = "inline";
+document.getElementById('zvuk99').play(); return false;
+}
+}
+
+function fn100()
+{
+if (document.getElementById("text100").value == "banán") {
+document.getElementById('cudlik100').style.display = "inline";
+document.getElementById('zvuk100').play(); return false;
+}
+}
+
+function next(id) {
+document.getElementsByClassName('container')[id-1].style.display = "none";
+document.getElementsByClassName('container')[id].style.display = "block";
+}
+</script>
+</body>
+</html>
