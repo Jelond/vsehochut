@@ -804,23 +804,23 @@ display: inline-block;
 </div>
 
 <div class="container">
-<h1>38. ї́жа </h1>
+<h1 title="Zdroj: https://cs.wikipedia.org/wiki/Derogace">38. Derogace znamená ... právního  nebo jeho části </h1>
 <hr/>
 <input class="display" id="text38" placeholder="answer">
 <br/>
 <button onclick="fn38()" id = "btn38">Klikni</button>
 <button id="cudlik38" style="display:none" onclick="next(38)">Další</button>
-<p class="tajenka" onclick="this.innerHTML='jídlo'">Tajenka</p>
+<p class="tajenka" onclick="this.innerHTML='zrušení; předpisu'">Tajenka</p>
 </div>
 
 <div class="container">
-<h1>39. мали́й </h1>
+<h1>39. Derogace znamená zrušení právního předpisu nebo ... </h1>
 <hr/>
 <input class="display" id="text39" placeholder="answer">
 <br/>
 <button onclick="fn39()" id = "btn39">Klikni</button>
 <button id="cudlik39" style="display:none" onclick="next(39)">Další</button>
-<p class="tajenka" onclick="this.innerHTML='malý'">Tajenka</p>
+<p class="tajenka" onclick="this.innerHTML='jeho části'">Tajenka</p>
 </div>
 
 <div class="container">
@@ -1752,7 +1752,7 @@ document.getElementById('zvuk37').play(); return false;
 
 function fn38()
 {
-if (document.getElementById("text38").value == "jídlo") {
+if (document.getElementById("text38").value == "zrušení; předpisu") {
 document.getElementById('cudlik38').style.display = "inline";
 document.getElementById('zvuk38').play(); return false;
 }
@@ -1760,7 +1760,7 @@ document.getElementById('zvuk38').play(); return false;
 
 function fn39()
 {
-if (document.getElementById("text39").value == "malý") {
+if (document.getElementById("text39").value == "jeho části") {
 document.getElementById('cudlik39').style.display = "inline";
 document.getElementById('zvuk39').play(); return false;
 }
